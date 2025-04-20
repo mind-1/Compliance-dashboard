@@ -1,0 +1,9 @@
+.nav-bar_buttons{
+    position: relative;
+    top: 30px;
+    right: 10px;
+}
+li { 
+    position: relative;
+    margin-bottom: 10px;
+}
