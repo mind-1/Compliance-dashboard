@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css';
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createHashRouter, createBrowserRouter, RouterProvider} from "react-router-dom";
 import Root from './src/pages/root/root.jsx';
 import ErrorPage from './error-page.jsx';
 import { CallbackPage } from './callback-page.jsx';
@@ -13,14 +13,14 @@ import Mentorspage from './Pages/Mentorspage/Mentorspage.jsx';
 import Policiespage from './Pages/Policiespage/Policiespage.jsx';
 import Compliancepage from './Pages/Compliancepage/Compliance.jsx';
 
-const router = createBrowserRouter( [
+const router = createHashRouter( [
   { 
       path:"/",
       element: <Auth0ProviderWithNavigate/>,
       errorElement: <ErrorPage />,
       children: [
         {
-          path:"app",
+          path:"/",
           element: <Root/>,
           children: [
             {
